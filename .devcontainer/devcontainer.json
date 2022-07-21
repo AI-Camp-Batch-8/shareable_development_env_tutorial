@@ -1,0 +1,47 @@
+{
+	"name": "Development environment",
+	// Sets the run context to one level up instead of the .devcontainer folder.
+	"context": "..",
+	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+	"dockerFile": "../Dockerfile",
+	"features": {
+		"github-cli": "latest",
+		"aws-cli": "latest",
+		"docker-in-docker": "latest"
+	},
+	// "postCreateCommand": "pre-commit install",
+	//
+	// If you have data need to be mount into development environment.
+	// "mounts": [
+	// 	"source=path_to_folder_to_mount,target=path_in_dev_env,type=bind,consistency=cached",
+	// ],
+	//
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-vsliveshare.vsliveshare-pack",
+				"njpwerner.autodocstring",
+				// Optional extensions
+				"GitHub.copilot",
+				// "eamodio.gitlens",
+				// "donjayamanne.githistory",
+				// "janisdd.vscode-edit-csv",
+				// "KevinRose.vsc-python-indent",
+				// "aaron-bond.better-comments",
+				"njqdev.vscode-python-typehint"
+			]
+		}
+	},
+	// "containerUser": "container",
+	"remoteUser": "container"
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Uncomment the next line to run commands after the container is created - for example installing curl.
+	// "postCreateCommand": "apt-get update && apt-get install -y curl",
+	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
+	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+	// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
+	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
+}
